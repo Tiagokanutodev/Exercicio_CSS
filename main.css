@@ -1,0 +1,197 @@
+/*
+h1
+{
+    color: green;             Meu portal de noticias ficou verde (H1)
+}
+
+#Entertainment h2
+{
+    color: gold;                chamei a (id="Entertainment") para colorir o H2 de Entretenimento uso o (#) antes 
+}
+
+.box1
+{
+    color: purple;               chamei a class (box1) para colorir a tag time de Entretenimento uso o (.) antes 
+}    
+
+*
+{
+    color: crimson;            deixa da cor crimson menos os d cima q ja foran coloridos, uso o (*) antes
+}
+*/
+
+
+*
+{
+    box-sizing: border-box;                   /*reset tem q estar na parte d cima, reseta tudo em ispecionar*/
+    margin: 0;
+    padding: 0;    
+}
+
+
+/*
+header
+{
+    background-color: darkgoldenrod;         assim pedie pra deixar todos os HEADER darkgoldenrod
+}
+*/
+
+
+body > header
+{
+    background-color: darkgreen;        /*dessa forma posso colorir apenas o filho direto do BODY que e o HEADER apenas o q vem depois do BODY*/ 
+    padding: 16px 0;                      /*aqui estou almentando o espaçamento do titulo principal* (mudei a cor do portal de noticias)*/    
+    color: white;
+}
+
+
+header .container                             /*selecionei minha tag CONTAINER dentro do meu elemento HEADER */
+{
+    display: flex;                            /*para que fique o elemento lado a lado*/
+    align-items: center;                      /*para alinhas os links esportes, economia, entrentenimento, tecnologia*/ 
+    justify-content: space-between;           /*para jogar para o lado e alinhas os links esportes, economia, entretenimento, tecnologia*/
+}
+
+
+header li                                               /*fui na tag header e chamei dela o (LI)*/
+{
+    display: inline;                                   /*A propriedade DISPLAY ela configura a forma q o elemento sera exibido*/ 
+    font-family: Arial, Helvetica, sans-serif;        /*INLINE to dizendo q quero ele em uma (linha) BLOCK quero ele em blocos, NONE nenhum dos elementos*/
+    font-weight: bold;
+    margin-left: 16px;                          /*para da espaçamento em sports, economia, entretenimento, tecnologia*/
+}
+
+
+header li a
+{
+    color: rgb(255, 255, 0);                /*colorindo esportes, economia, entretenimento, tecnologia, links cabeçalho*/ 
+    text-decoration: none;                    /*tirando o ___________ sports, economia, entretenimento, tecnologia*/
+}
+
+
+.container
+{
+    width: 1080px;                            /*largura da tela, aqui tbm mecho nos cantos da tela almento diminuo resoluçao LEMBRAR*/
+    margin: 0 auto;                           /*altura direita baixo esquerda*/
+}
+
+
+.articles                                     /*chamei a class ARTICLES dos 4 elementos ESPORTES, ECONOMIA, ENTRETENIMENTO, TECNOLOGIA*/
+{
+    display: flex;                            /*com esse display: flex; alinho tudo lado a lado*/
+    justify-content: space-between;
+}
+
+
+.articles article img
+{
+    /*height: 180px;*/                            /*chamei a class ARTICLES e mandei alinhar as imagens da tag ARTICLE lado a lado*/  
+    width: 100%;  
+}
+
+
+.articles article
+{
+    width: 28%;                               /*aqui estou fastando a distancia das imagens q estao na tag ARTICLE*/
+}
+
+section
+{
+    padding: 16px 0;                          /*espaçamentos nas figuras*/
+}
+
+
+section h2, 
+.articles article
+{
+    margin-bottom: 16px;                     /*espaçamento nas figuras*/
+}
+
+.articles article h3
+{
+    margin-top: 10px;                        /*aqui estou dizendo pra abrir mais espaços nos H3 */
+    margin-bottom: 10px;
+}
+
+.articles article a
+{
+    background-color: darkgreen;           /*aqui estou mechendo no botao link LER MAIS colorinho*/
+    color: rgb(255, 255, 0);               /*para almentar a borda da cor do botao*/
+    padding: 8px;                            /*tamanho do botao*/
+    display: inline-block;                   /*aqui mudei o displai INLINE para display: inline-block para a margem da cor do botao poder dar certo*/
+    text-decoration: none;                   /*aqui estou tirando o ____ do botao LER MAIS LINK*/
+    font-weight: bold;                       /*para almentar as letras dos botoes*/
+    margin-top: 8px;                         /*para regular o espaço do botao*/
+}
+
+
+.articles article a:hover
+{
+    text-decoration: underline;             /*aqui e para quando eu passa o mouse em cima dos links LER MAIS aparecer a mensagem LEIA A NOTICIA COMPLETA da tag <A>*/
+}
+
+
+.articles article p                          /*chamei a tag P para mudar a fonte*/                 
+.articles article a                          /*chamei a tag A para mudar a fonte*/
+{
+    font-family: Arial, Helvetica, sans-serif;      /*font e tipo de fonte*/        
+}
+
+
+.articles article h3
+{
+    font-size: 24px;                          /*estou dizendo que a tag H3 tem um tamanho de fonte de 24px*/       
+}
+
+
+section h2                                    /*chamei o H2 para mudar o tamanho da fonte para 32px*/
+{
+    font-size: 32px;                          /*tamanho da fonte 32px*/
+}
+
+#sports
+{
+    background-color: rgb(209, 206, 206);   /*mudei a cor do fundo da area SPORTS*/ 
+} 
+
+
+#sports .articles  article a
+{
+    background-color: black;                /*mudando a cor dos botoes da area SPORTS*/
+}
+
+
+#economy
+{
+    background-color: rgb(226, 204, 75);
+}
+
+
+#economy .articles article a
+{
+    background-color: rgb(6, 99, 6);
+}
+
+
+#entertainment
+{
+    background-color: rgb(154, 245, 64);
+}
+
+
+#entertainment .articles article a
+{
+    background-color: rgb(26, 26, 255);
+} 
+
+
+#technology
+{
+    background-color: rgb(174, 174, 255);
+}
+
+
+#technology .articles article a
+{
+    background-color: rgb(68, 68, 2);
+}
